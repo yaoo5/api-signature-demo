@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2017",
+    "sourceMap": true,
+    "esModuleInterop": true
+  },
+  "include": [
+    "test",
+    "lib",
+    "client.ts",
+    "server.ts",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
