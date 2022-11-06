@@ -2,10 +2,12 @@
   "name": "api-signature-demo",
   "version": "1.0.0",
   "description": "api 签名demo",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "typings": "./typings",
   "scripts": {
     "server": "nodemon server.ts",
-    "test": "jest --verbose --coverage"
+    "test": "jest --verbose --coverage",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",

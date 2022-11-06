@@ -3,13 +3,13 @@
     "module": "commonjs",
     "target": "es2017",
     "sourceMap": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "declaration": true,
+    "outDir": "dist",
+    "declarationDir": "typings"
   },
   "include": [
-    "test",
     "lib",
-    "client.ts",
-    "server.ts"
   ],
   "exclude": [
     "node_modules"

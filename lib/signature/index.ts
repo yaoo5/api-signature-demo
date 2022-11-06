@@ -1,5 +1,5 @@
 import type {Context} from "koa";
-import {HS256} from "../shared/tool";
+import {HS256} from "../tools";
 
 const nonceMap: { nonce: string | number, time: number }[] = [];
 

@@ -1,5 +1,5 @@
 import type {Context} from "koa";
-import {base64decode, base64encode, HS256} from "../shared/tool";
+import {base64decode, base64encode, HS256} from "../tools";
 
 export function sign(payload: Record<string | number, any>, secret): string {
     const header = { alg: 'HS256', type: "JWT" };
