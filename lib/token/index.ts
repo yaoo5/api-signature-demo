@@ -8,7 +8,7 @@ export default (token: Token) => {
 
         if (reqToken !== sysToken) {
             ctx.status = 403;
-            ctx.message = `token middleware: valid token failed, get ${reqToken}`
+            ctx.message = `[token middleware]: valid token failed, get ${reqToken}`
             return;
         }
 
