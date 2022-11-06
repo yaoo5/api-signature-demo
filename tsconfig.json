@@ -9,7 +9,7 @@
     "test",
     "lib",
     "client.ts",
-    "server.ts",
+    "server.ts"
   ],
   "exclude": [
     "node_modules"

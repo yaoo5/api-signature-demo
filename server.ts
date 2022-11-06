@@ -2,6 +2,7 @@ import Koa from 'koa';
 import Router from "koa-router";
 import token from "./lib/token";
 import signature from "./lib/signature";
+import jwt from "./lib/jwt";
 
 const app = new Koa();
 app.keys = ['private key'];
@@ -10,7 +11,7 @@ app.keys = ['private key'];
 const router = new Router({ prefix: '/api' });
 router.post('/signature', (ctx) => ctx.body = 'hello world');
 router.post('/signature/token', token('app-secret-token'), (ctx) => ctx.body = 'hello world');
-router.post('/signature/jwt', (ctx) => ctx.body = 'hello world');
+router.post('/signature/jwt', jwt('your-256-bit-secret'),(ctx) => ctx.body = 'hello world');
 router.post('/signature/signature',
     signature({
         getSecretByKey: async (ctx, appKey) => !appKey ? '' : `${appKey}&app-secret`

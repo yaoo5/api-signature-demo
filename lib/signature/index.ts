@@ -1,5 +1,5 @@
 import type {Context} from "koa";
-import {sha256} from "../shared/tool";
+import {HS256} from "../shared/tool";
 
 const nonceMap: { nonce: string | number, time: number }[] = [];
 
@@ -42,7 +42,7 @@ export function sign(
         + `${queryString}\n`
         + JSON.stringify(requestPayload)
 
-    return sha256(str, appSecret);
+    return HS256(str, appSecret);
 }
 export function validate(
     timestamp: number,
